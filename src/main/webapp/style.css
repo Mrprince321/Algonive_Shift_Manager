@@ -1,0 +1,220 @@
+/* ---------- IMPORT FUTURISTIC FONT ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ---------- PAGE BACKGROUND ---------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url("images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding-top: 100px;  /* space for navbar */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- GLASS EFFECT OVERLAY ---------- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* ---------- 🚀 FUTURISTIC FLOATING NAVBAR ---------- */
+.navbar-custom {
+    position: fixed;
+    top: 20px;  
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
+    z-index: 1000;
+}
+
+.navbar-custom a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.navbar-custom a:hover,
+.navbar-custom a.active {
+    color: #00d9ff;
+    text-shadow: 0 0 8px #00eaff, 0 0 12px #00eaff;
+    transform: scale(1.05);
+}
+
+/* ---------- FORM CARD ---------- */
+.container, .card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 420px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    animation: fadeIn 0.8s ease;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- INPUT FIELDS ---------- */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+input:focus, select:focus {
+    box-shadow: 0 0 10px #00d9ff;
+}
+
+input::placeholder {
+    color: #cfd9e1;
+}
+
+/* ---------- BUTTON ---------- */
+button, .dashboard-btn {
+    background: linear-gradient(90deg, #007bff, #00d9ff);
+    color: white;
+    padding: 12px;
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover,
+.dashboard-btn:hover {
+    box-shadow: 0 0 20px #00d9ff;
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background: linear-gradient(90deg, #ff4d4d, #ff0000);
+}
+
+/* ---------- TEXT ---------- */
+.text-glow {
+    text-shadow: 0 0 12px cyan;
+}
+
+.small-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.small-text a {
+    color: #00d9ff;
+}
+.small-text a:hover {
+    text-shadow: 0 0 8px #00d9ff;
+}
+
+/* ---------- DASHBOARD ---------- */
+.dashboard-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 20px;
+    width: 600px;
+    margin: auto;
+    color: white;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.dashboard-title {
+    font-size: 30px;
+    text-shadow: 0 0 12px #00d9ff;
+}
+
+.welcome {
+    font-size: 18px;
+    color: #b2f7ff;
+}
+
+/* ---------- SHIFT TABLE ---------- */
+.shift-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.shift-table th, .shift-table td {
+    padding: 12px;
+    text-align: center;
+    color: white;
+}
+
+.shift-table th {
+    background: rgba(0, 217, 255, 0.3);
+    text-shadow: 0 0 10px #00d9ff;
+}
+
+.shift-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.shift-table tr:hover {
+    background: rgba(0, 217, 255, 0.2);
+    transition: 0.3s;
+}
+
+/* ============ NOTIFICATION ============= */
+.futuristic-alert {
+    padding: 15px;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    animation: fadeIn 0.7s ease;
+    transition: opacity 1s ease;
+}
+
+.alert-success {
+    background: rgba(0, 255, 140, 0.3);
+    border: 1px solid rgba(0, 255, 140, 0.6);
+    text-shadow: 0 0 8px #00ffaa;
+}
+
+.alert-danger {
+    background: rgba(255, 60, 60, 0.3);
+    border: 1px solid rgba(255, 0, 0, 0.6);
+    text-shadow: 0 0 8px red;
+}
+
+@media(max-width: 650px) {
+    .dashboard-container, .container {
+        width: 90%;
+    }
+}
